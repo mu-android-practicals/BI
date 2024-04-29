@@ -1,0 +1,100 @@
+Practical No. 6
+ence Practical Journal
+Apply the What if Analysis for data visualization. Design and generate necessary
+reports based on the datawarehouse data.
+(A) USING R STUDIO
+Steps to follow:
+1. Open R Studio.
+2. Create a vector named rf
+> rf <- c(799, 1176, 865, 1334, 643, 917, 658, 998, 784,985, 1071)
+3. Using the time series function combine the data and then plot.
+> rf.ts <- ts(rf, start=c (2012,1), frequency=12)
+> plot (rf.ts)
+
+
+
+
+
+Practical No. 7
+Perform the data classification using classification algorithm
+Steps to follow :
+1. Open RStudio.
+2. Install appropriate packages -
+> install.packages ("party")
+3. Extract the installed package.
+> library("party")
+4. Store the data and then display it in output.
+> input.data <- readingskills [c (1:105),]
+> output.tree <-ctree (nativeSpeaker~age+shoeSize+score,data=input.data)
+5. Plot the graph.
+> plot (output. tree)
+
+
+
+Practical No. 8
+Perform the data clustering using clustering algorithm
+Steps to follow:
+1. Open RStudio.
+2. Extract the dataset of iris to perform clustering.
+> newiris <- iris
+3. Assign null value to the variable.
+> newiris$Species <- NULL
+4. Perform clustering and define the size of newiris cluster as 3
+> (kc <- kmeans (newiris, 3))
+5. Plot the graph with the following rows and columns
+> plot (newiris [c("Sepal.Length", "Sepal.Width")], col =kc$cluster)
+
+
+
+Practical No. 9
+Perform the Linear Regression on the given data warehouse data.
+Steps to follow:
+1. Open RStudio.
+2. Assign the variables to x and y variable.
+> X <- c(151, 174, 138, 186, 128, 136, 179, 162, 151, 132)
+> Y <- c(63, 81, 56, 91, 47, 57, 76, 72, 62, 48)
+3. Create linear regression variable.
+> relation <- lm (y~x)
+4. Print the variable.
+> print (relation)
+5. Print the summary of the linear relation variable.
+> print (summary)
+6. Create a data frame and find the y variable corresponding to x value.
+> a <- data.frame (x=179)
+7. Predict the relation of the data frame and the linear relation variable.
+> result <- prediction (relation, a)
+8. Print the result.
+>print (result)
+9. Plot the graph for the following.
+> plot (y, x, col = "red", main = "HEIGHT and WEIGHT",abline (lm(x~y)), cex = 1.3,pch = 16, xlab= "Weight",ylab "height")
+
+
+
+
+
+
+
+Practical No. 10
+Perform Data Analysis using Timeseries.
+Steps to follow:
+1. Open RStudio.
+2. Get the data points for R vector
+>rainfall <- c(799, 1174.8, 865.1, 1334.6, 635.6, 918.6, 998.6, 784.2, 985.7, 882.8, 1071)
+3. Convert to time series object.
+>rainfall. timeseries <- ts (rainfall, start = c(2012, 1),frequency = 12)
+4. Print the data
+>print (rainfall. timeseries)
+5. Give file name
+>png (file = "rainfall.png")
+6. Plot the graph
+>plot (rainfall.timeseries)
+7. Save the file
+>dev.off()
+8. Plot the file again if the graph is not visible
+>plot (rainfall.timeseries)
+
+
+
+
+
+
